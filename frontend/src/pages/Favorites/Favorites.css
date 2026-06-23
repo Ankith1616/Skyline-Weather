@@ -1,0 +1,146 @@
+.favorites-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 1.75rem;
+  font-family: var(--font-display);
+  margin-bottom: 0.25rem;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Grids */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.favorite-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.favorite-card:hover {
+  transform: translateY(-2px);
+}
+
+.fav-city-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fav-city-meta h4 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+.meta-icon {
+  color: var(--accent-primary);
+}
+
+.country-badge {
+  font-size: 0.7rem;
+  background: var(--border-glass);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.coords-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.fav-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.view-detail-hint {
+  color: var(--text-muted);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateX(-5px);
+}
+
+.favorite-card:hover .view-detail-hint {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delete-fav-btn {
+  background: transparent;
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.delete-fav-btn:hover {
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Empty bookmarks */
+.empty-favs {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0.75rem;
+}
+
+.empty-icon {
+  color: var(--accent-primary);
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.empty-favs h3 {
+  font-size: 1.25rem;
+}
+
+.empty-favs p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 350px;
+}
+
+.favs-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  margin: 3rem auto;
+}

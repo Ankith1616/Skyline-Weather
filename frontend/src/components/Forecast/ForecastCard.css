@@ -1,0 +1,73 @@
+.forecast-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.forecast-card-item:hover {
+  transform: translateY(-4px);
+}
+
+.forecast-card-day {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.forecast-card-icon-container {
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-card-icon.clear { color: #f59e0b; }
+.forecast-card-icon.clouds { color: #94a3b8; }
+.forecast-card-icon.rain { color: #3b82f6; }
+.forecast-card-icon.drizzle { color: #60a5fa; }
+.forecast-card-icon.snow { color: #93c5fd; }
+.forecast-card-icon.storm { color: #a855f7; }
+
+.forecast-card-condition {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-card-temps {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.forecast-card-temp-max {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.forecast-card-temp-min {
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .forecast-card-item {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .forecast-card-icon-container {
+    margin: 0;
+  }
+  
+  .forecast-card-condition {
+    margin-bottom: 0;
+  }
+}

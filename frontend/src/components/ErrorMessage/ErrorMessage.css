@@ -1,0 +1,58 @@
+.error-panel {
+  max-width: 450px;
+  width: 100%;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-left: 4px solid var(--error);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.error-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.error-icon {
+  color: var(--error);
+}
+
+.error-header h4 {
+  font-size: 1.2rem;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.error-close-btn {
+  background: transparent;
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.error-close-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--border-glass);
+}
+
+.error-body p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.error-back-btn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+}
