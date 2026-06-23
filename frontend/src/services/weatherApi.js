@@ -94,8 +94,10 @@ const generateWeatherData = (searchType, query, coords = null) => {
   return { current, forecast };
 };
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export const fetchWeatherAndLog = async (searchType, query, coords = null) => {
-  let url = `/api/weather/search?type=${searchType}&query=${encodeURIComponent(query)}`;
+  let url = `${API_BASE_URL}/api/weather/search?type=${searchType}&query=${encodeURIComponent(query)}`;
   if (searchType === 'coords' && coords) {
     url += `&lat=${coords.lat}&lon=${coords.lon}`;
   }
@@ -143,7 +145,7 @@ export const fetchWeatherAndLog = async (searchType, query, coords = null) => {
  * GET /api/weather
  */
 export const getSearchHistory = async () => {
-  const response = await fetch('/api/weather');
+  const response = await fetch(`${API_BASE_URL}/api/weather`);
   const result = await response.json();
   
   if (!response.ok) {
@@ -158,7 +160,7 @@ export const getSearchHistory = async () => {
  * DELETE /api/weather/:id
  */
 export const deleteHistoryItem = async (id) => {
-  const response = await fetch(`/api/weather/${id}`, {
+  const response = await fetch(`${API_BASE_URL}/api/weather/${id}`, {
     method: 'DELETE',
   });
   
