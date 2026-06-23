@@ -34,6 +34,13 @@ app.use(express.json());
 app.use('/api', weatherRoutes);
 
 // Base Route
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    success: true, 
+    message: 'Welcome to the Skyline Weather Backend API. The server is running smoothly.' 
+  });
+});
+
 app.get('/health', (req, res) => {
   res.status(200).json({ success: true, message: 'Server is running smoothly' });
 });
